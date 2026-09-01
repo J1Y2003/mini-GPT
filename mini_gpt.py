@@ -95,6 +95,7 @@ class FeedForward(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(n_embd, n_embd),
             nn.ReLU(),
+            nn.Linear(n_embd, n_embd),
         )
 
     def forward(self, x):
